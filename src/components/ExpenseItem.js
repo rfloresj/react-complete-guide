@@ -4,6 +4,7 @@ import "./ExpenseItem.css";
 function ExpenseItem(props) {
   return (
     <div className="expense-item">
+      <ExpenseDate date={props.date} />
       <div className="expense-item__description">
         <ExpenseDate date={props.date}/>
         <h2>{props.title}</h2>
