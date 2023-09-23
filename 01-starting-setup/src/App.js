@@ -3,7 +3,7 @@ import componentsImage from './assets/images/components.png';
 import stateImage from './assets/images/state.png';
 import eventsImage from './assets/images/events.png';
 
-// eslint-disable-next-line
+
 const concepts = [
   {
     title: 'Components',
