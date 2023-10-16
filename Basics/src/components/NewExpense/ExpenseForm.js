@@ -2,37 +2,40 @@ import React, { useState } from "react";
 import "./ExpenseForm.css";
 
 const ExpenseForm = () => {
-  /* const [enteredTitle, setEnteredTitle] = useState("");
+  const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
-  const [enteredDate, setEnteredDate] = useState(""); */
+  const [enteredDate, setEnteredDate] = useState("");
 
-  const [userInput, setUserInput] = useState({
-    enteredTitle: '',
-    enteredAmount: '',
-    enteredDate: ''
-  });
+  // const [userInput, setUserInput] = useState({
+  //   enteredTitle: '',
+  //   enteredAmount: '',
+  //   enteredDate: ''
+  // });
 
   const titleChangeHandler = (event) => {
-    // setEnteredTitle(event.target.value);
-    setUserInput({
-      ...userInput, //pulls out all the key value pairs, and adds them to this new object ↓
-      enteredTitle: event.target.value,
-    })
+    setEnteredTitle(event.target.value);
+    // setUserInput({
+    //   ...userInput, //pulls out all the key value pairs, and adds them to this new object ↓
+    //   enteredTitle: event.target.value,
+    // })
+    // setUserInput((prevState) => {
+    //   return { ...prevState, enteredTitle: event.target.value }; // This is the safer way to ensure that you always operate on the latest state snapshot, you should use this function syntax here whenever you state update depends on the previous state.
+    // });
   };
   const amountChangeHandler = (event) => {
-    // setEnteredAmount(event.target.value);
-    setUserInput({
-      ...userInput,
-      enteredAmount: event.target.value,
-    })
+    setEnteredAmount(event.target.value);
+    // setUserInput({
+    //   ...userInput,
+    //   enteredAmount: event.target.value,
+    // })
   };
   const dateChangeHandler = (event) => {
-    // setEnteredDate(event.target.value);
-    setUserInput({
-      ...userInput,
-      enteredDate: event.target.value,
-    })
-  }
+    setEnteredDate(event.target.value);
+    // setUserInput({
+    //   ...userInput,
+    //   enteredDate: event.target.value,
+    // })
+  };
 
 
   return (

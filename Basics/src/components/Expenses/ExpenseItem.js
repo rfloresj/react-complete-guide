@@ -5,9 +5,9 @@ import ExpenseDate from "./ExpenseDate";
 import "./ExpenseItem.css";
 
 const ExpenseItem = (props) => {
-  // function clickHandler
+  // function clickHandler() {}
  const [title, setTitle] = useState(props.title); // destructuring
-
+ console.log('ExpenseItem evaluated by React');
   const clickHandler = () => {
     setTitle('Updated!');
     console.log(title)
